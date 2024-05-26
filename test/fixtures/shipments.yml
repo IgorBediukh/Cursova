@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order: one
+  shipment_date: 2023-05-22
+
+two:
+  order: two
+  shipment_date: 2023-05-22

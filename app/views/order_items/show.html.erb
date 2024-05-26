@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../../assets/stylesheets/stylesheet.css">
+<body>
+<header>
+  <h1>Warehouse management system</h1>
+</header>
+
+<main>
+
+  <p style="color: green"><%= notice %></p>
+
+  <div class="boxy">
+
+    <%= render @order_item %>
+
+    <div>
+      <%= link_to "Edit this order item", edit_order_item_path(@order_item)  , style: 'margin-top: 10px; background-color: rgb(248, 203, 210)'%> |
+      <%= link_to "Back to order items", order_items_path  , style: 'margin-top: 10px; background-color: rgb(248, 203, 210)'%>
+
+      <%= button_to "Destroy this order item", @order_item, method: :delete , style: 'margin-top: 10px; background-color: rgb(248, 203, 210)' %>
+    </div>
+
+  </div>
+
+</main>
+
+
+
+</body>

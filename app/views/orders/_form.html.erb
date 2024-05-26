@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="../../assets/stylesheets/stylesheet.css">
+<body>
+
+<main>
+
+  <%= form_with(model: order) do |form| %>
+    <% if order.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+        <ul>
+          <% order.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :customer_id %>
+      <%= form.collection_select :customer_id, @customers, :id, :name %>
+    </div>
+
+    <div>
+      <%= form.label :order_date, style: "display: block" %>
+      <%= form.date_field :order_date %>
+    </div>
+
+    <div>
+      <%= form.label :status, style: "display: block" %>
+      <%= form.text_field :status %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+</main>
+
+</body>

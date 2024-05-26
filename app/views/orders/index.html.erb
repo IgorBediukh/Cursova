@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="../../assets/stylesheets/stylesheet.css">
+<body>
+<header>
+  <h1>Warehouse management system</h1>
+</header>
+
+<main>
+
+  <p style="color: green"><%= notice %></p>
+
+  <div class="boxy">
+
+    <h2>Orders</h2>
+
+    <div id="orders">
+      <% @orders.each do |order| %>
+        <%= render order %>
+        <p>
+          <%= link_to "Show this order", order , style: 'margin-top: 10px; background-color: rgb(248, 203, 210)'  %>
+        </p>
+      <% end %>
+    </div>
+
+  </div>
+
+  <p style="text-align:center;">
+    <%= link_to "New order", new_order_path  , style: 'margin-top: 10px; background-color: rgb(248, 203, 210)' %>
+  </p>
+  <p style="text-align:center;">
+    <%= link_to 'На головну', root_path, class: 'btn btn-primary' , style: 'margin-top: 10px; background-color: rgb(248, 203, 210)'  %>
+  </p>
+
+</main>
+
+
+
+</body>

@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="../../assets/stylesheets/stylesheet.css">
+<body>
+<header>
+  <h1>Warehouse management system</h1>
+</header>
+
+<main>
+
+  <h2 style="text-align:center">Generated Report</h2>
+
+  <div class="boxy">
+
+    <h3>Shipments</h3>
+    <% @shipments.each do |shipment| %>
+      <p>Shipment ID: <%= shipment.id %></p>
+      <p>Shipment Date: <%= shipment.shipment_date %></p>
+      <p>Shipment Order: <%= shipment.order_id %></p>
+    <% end %>
+
+  </div>
+
+  <div class="boxy" style="margin-top: 25px;">
+
+    <h3>Orders</h3>
+    <% @orders.each do |order| %>
+      <p>Order ID: <%= order.id %></p>
+      <p>Order Date: <%= order.order_date %></p>
+      <p>Order Customer: <%= order.customer_id %></p>
+      <p>Order Status: <%= order.status %></p>
+    <% end %>
+
+  </div>
+
+  <p style="text-align:center;">
+    <%= link_to "Back to Reports", reports_path , style: 'margin-top: 10px; background-color: rgb(248, 203, 210)'  %>
+  </p>
+
+</main>
+
+
+
+</body>
